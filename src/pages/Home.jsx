@@ -76,6 +76,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- SERVICE INTRO ---------- */}
+      <section className="section section--alt">
+        <div className="container">
+          <SectionReveal className="service-intro">
+            <p className="section__eyebrow">Services</p>
+            <h2 className="service-intro__title">
+              Professional Site Planning &amp; Civil Drawings
+            </h2>
+            <p className="service-intro__text">
+              I help homeowners, builders, and developers convert ideas into
+              practical, construction-ready site plans and civil engineering
+              drawings that maximize land utilization, ensure functionality, and
+              support smooth project execution.
+            </p>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* ---------- HIGHLIGHTS ---------- */}
       <section className="section">
         <div className="container">
