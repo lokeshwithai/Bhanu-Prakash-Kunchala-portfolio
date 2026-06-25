@@ -40,7 +40,16 @@ export default function Home() {
             <h1 className="hero__name">{profile.name}</h1>
             <p className="hero__title">{profile.title}</p>
             <p className="hero__motto">Let’s build something solid together.</p>
-            <p className="hero__tagline">{profile.tagline}</p>
+
+            <h2 className="hero__service-title">
+              Professional Site Planning &amp; Civil Drawings
+            </h2>
+            <p className="hero__service-text">
+              I help homeowners, builders, and developers convert ideas into
+              practical, construction-ready site plans and civil engineering
+              drawings that maximize land utilization, ensure functionality, and
+              support smooth project execution.
+            </p>
 
             <p className="hero__availability">
               <span className="hero__availability-dot" aria-hidden="true" />
@@ -73,24 +82,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ---------- SERVICE INTRO ---------- */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionReveal className="service-intro">
-            <p className="section__eyebrow">Services</p>
-            <h2 className="service-intro__title">
-              Professional Site Planning &amp; Civil Drawings
-            </h2>
-            <p className="service-intro__text">
-              I help homeowners, builders, and developers convert ideas into
-              practical, construction-ready site plans and civil engineering
-              drawings that maximize land utilization, ensure functionality, and
-              support smooth project execution.
-            </p>
-          </SectionReveal>
         </div>
       </section>
 
