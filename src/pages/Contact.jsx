@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import SectionReveal from '../components/SectionReveal.jsx'
 import { profile } from '../data/resume.js'
 
@@ -34,22 +33,6 @@ const contactCards = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', subject: '', message: '' })
-
-  const onChange = (e) =>
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
-
-  const onSubmit = (e) => {
-    e.preventDefault()
-    const subject = encodeURIComponent(
-      form.subject || `Portfolio enquiry from ${form.name || 'website'}`
-    )
-    const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name}`.trim()
-    )
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
-  }
-
   return (
     <>
       <section className="page-header">
@@ -63,10 +46,10 @@ export default function Contact() {
       </section>
 
       <section className="section">
-        <div className="container contact-layout">
-          <SectionReveal className="contact-info">
+        <div className="container">
+          <SectionReveal>
             <h2 className="section__title">Contact details</h2>
-            <div className="contact-cards">
+            <div className="contact-cards contact-cards--wide">
               {contactCards.map((c) => (
                 <a
                   key={c.label}
@@ -84,54 +67,6 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-          </SectionReveal>
-
-          <SectionReveal className="contact-form-wrap" delay={120}>
-            <form className="contact-form" onSubmit={onSubmit}>
-              <h2 className="section__title">Send a message</h2>
-              <p className="contact-form__note">
-                This opens your email app with the message ready to send.
-              </p>
-
-              <label>
-                Your name
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={onChange}
-                  placeholder="e.g. Ravi Kumar"
-                  required
-                />
-              </label>
-
-              <label>
-                Subject
-                <input
-                  type="text"
-                  name="subject"
-                  value={form.subject}
-                  onChange={onChange}
-                  placeholder="Project / opportunity"
-                />
-              </label>
-
-              <label>
-                Message
-                <textarea
-                  name="message"
-                  rows="5"
-                  value={form.message}
-                  onChange={onChange}
-                  placeholder="Tell me a bit about it…"
-                  required
-                />
-              </label>
-
-              <button type="submit" className="btn btn--accent btn--block">
-                Send Message
-              </button>
-            </form>
           </SectionReveal>
         </div>
       </section>

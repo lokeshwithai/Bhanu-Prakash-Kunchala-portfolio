@@ -962,6 +962,14 @@ button {
   display: grid;
   gap: 1rem;
 }
+.contact-cards--wide {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 600px) {
+  .contact-cards--wide {
+    grid-template-columns: 1fr;
+  }
+}
 .contact-card {
   display: flex;
   align-items: center;
