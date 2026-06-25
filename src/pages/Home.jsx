@@ -42,6 +42,11 @@ export default function Home() {
             <p className="hero__motto">Let’s build something solid together.</p>
             <p className="hero__tagline">{profile.tagline}</p>
 
+            <p className="hero__availability">
+              <span className="hero__availability-dot" aria-hidden="true" />
+              Open to site engineering and project engineering opportunities.
+            </p>
+
             <div className="hero__actions">
               <Link to="/gallery" className="btn btn--accent">
                 View Gallery
