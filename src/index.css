@@ -297,6 +297,34 @@ button {
   color: var(--amber);
   margin-bottom: 1rem;
 }
+.hero__motto {
+  font-size: clamp(1.25rem, 2.8vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--white);
+  max-width: 560px;
+  margin: 0 0 1rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid var(--amber);
+  animation: motto-in 0.7s var(--ease) both 0.15s;
+}
+.hero__motto::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 0.6rem;
+  background: var(--amber);
+  border-radius: 3px;
+}
+@keyframes motto-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
 .hero__tagline {
   color: var(--slate-400);
   font-size: 1.05rem;

@@ -39,6 +39,7 @@ export default function Home() {
             <span className="hero__eyebrow">👷 {profile.location}</span>
             <h1 className="hero__name">{profile.name}</h1>
             <p className="hero__title">{profile.title}</p>
+            <p className="hero__motto">Let’s build something solid together.</p>
             <p className="hero__tagline">{profile.tagline}</p>
 
             <div className="hero__actions">
