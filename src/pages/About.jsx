@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom'
 import SectionReveal from '../components/SectionReveal.jsx'
-import {
-  profile,
-  responsibilities,
-  personalDetails,
-  languages,
-} from '../data/resume.js'
+import { profile, responsibilities, languages } from '../data/resume.js'
 
 export default function About() {
   return (
@@ -48,17 +43,7 @@ export default function About() {
 
           <SectionReveal className="about-side" delay={120}>
             <div className="info-card">
-              <h3>Personal Details</h3>
-              <ul className="info-list">
-                {personalDetails.map((d) => (
-                  <li key={d.label}>
-                    <span>{d.label}</span>
-                    <strong>{d.value}</strong>
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="info-card__subhead">Languages</h3>
+              <h3>Languages</h3>
               <div className="chips">
                 {languages.map((l) => (
                   <span className="chip chip--accent" key={l}>
